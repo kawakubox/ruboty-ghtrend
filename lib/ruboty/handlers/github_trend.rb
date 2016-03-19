@@ -9,7 +9,7 @@ module Ruboty
       def execute(message)
         text = "```\n"
         text << "====================\n"
-        ::Ghtrend.trend.each do |repo|
+        ::Ghtrend.trend.slice(0, 5).each do |repo|
           text << "Repository  : #{repo[:name]}(#{repo[:url]})\n"
           text << "Description : #{repo[:description]}\n"
           text << "Lang & Star : #{repo[:meta]}\n"
