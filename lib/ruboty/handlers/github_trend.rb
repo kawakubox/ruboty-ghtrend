@@ -16,7 +16,7 @@ module Ruboty
           text << "====================\n"
         end
         text << '```'
-        message.reply(text)
+        message.reply(text.force_encoding('UTF-8'))
       end
     end
   end
